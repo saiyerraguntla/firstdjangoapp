@@ -1,0 +1,10 @@
+<h1>{{ 'Off the Grid Events:' }}</h1>
+{% if ordered_event_list %}
+    <ul>
+    {% for event in ordered_event_list %}
+        <li><a href="{% url 'offthegrid:display_vendors_at_event' event.id %}">{{ event.event_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No events are upcoming.</p>
+{% endif %}

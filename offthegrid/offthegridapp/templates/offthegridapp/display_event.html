@@ -1,0 +1,6 @@
+<h1>{{ event.vendor_name }}</h1>
+<ul>
+{% for vendor in event.vendor_set.all %}
+    <li>{{ vendor.vendor_name }}</li>
+{% endfor %}
+</ul>
